@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/connectService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="连接服务"/>
+
+    <Button
+        android:id="@+id/testAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加法" />
+
+    <Button
+        android:id="@+id/testMulti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相乘" />
+
+    <Button
+        android:id="@+id/testCallback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="回调" />
+
+</LinearLayout>
