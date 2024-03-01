@@ -10,4 +10,10 @@ class Debug {
 
         Log.d(tag, msg);
     }
+
+    static void i(String tag, String msg) {
+        if (!isDebug) return;
+
+        Log.i(tag, msg);
+    }
 }

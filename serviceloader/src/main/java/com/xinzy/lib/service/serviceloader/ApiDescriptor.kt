@@ -3,8 +3,7 @@ package com.xinzy.lib.service.serviceloader
 import android.os.IBinder
 import android.os.IInterface
 
-class ApiDescriptor(private val api: IInterface,
-    private val version: Int) : IApiDescriptor.Stub() {
+class ApiDescriptor(private val api: IInterface, private val version: Int) : IApiDescriptor.Stub() {
 
     private val typeInfo: TypeInfo
 

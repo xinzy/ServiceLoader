@@ -20,10 +20,10 @@ class CalculateClient : ICalculate.Stub() {
         return first - second
     }
 
-//    override fun multi(param: Param?): Int {
-//        Log.d("CalculateClient", "param=$param")
-//        return if (param == null) 0 else param.first * param.second
-//    }
+    override fun multi(param: Param?): Int {
+        Log.d("CalculateClient", "param=$param")
+        return if (param == null) 0 else param.first * param.second
+    }
 
     override fun setCallback(callback: ICallback?) {
         this.callback = callback

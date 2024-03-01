@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.testMulti).setOnClickListener {
             calculateService?.let {
-//                val result = it.multi(Param(2, 3))
-//                Log.d("MainActivity", "onCreate: $result")
+                val result = it.multi(Param(2, 3))
+                Log.d("MainActivity", "onCreate: $result")
             }
         }
     }

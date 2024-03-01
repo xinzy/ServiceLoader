@@ -8,7 +8,7 @@ interface Calculate {
 
     fun sub(first: Int, second: Int): Int
 
-//    fun multi(param: Param?): Int
+    fun multi(param: Param?): Int
 
     fun setCallback(callback: ICallback)
 }

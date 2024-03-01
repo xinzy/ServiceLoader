@@ -10,6 +10,7 @@ import android.os.DeadObjectException;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
+import android.os.Parcelable;
 import android.os.RemoteException;
 import android.text.TextUtils;
 
@@ -169,6 +170,8 @@ public class RemoteApi {
         } else if (type.isInterface()) {
             SuperStub stub = new SuperStub(info, value);
             p.writeStrongBinder(stub);
+        } else if (Parcelable.class.isAssignableFrom(type)) {
+            p.writeParcelable((Parcelable) value, 0);
         }
     }
 

@@ -34,7 +34,8 @@ public final class TypeInfo implements Parcelable {
                 && clazz != String[].class
                 && clazz != Bundle[].class
                 && clazz != List.class
-                && clazz != Map.class) {
+                && clazz != Map.class
+                && !Parcelable.class.isAssignableFrom(clazz)) {
 
             if (!IInterface.class.isAssignableFrom(clazz)) {
                 throw new IllegalArgumentException("Don't support other object type in the parameter: " + clazz);
@@ -66,8 +67,9 @@ public final class TypeInfo implements Parcelable {
                     MethodInfo methodInfo = new MethodInfo(method);
                     this.methods.put(name, methodInfo);
                 }
-            } catch (ClassNotFoundException | IllegalAccessException var11) {
-                throw new RuntimeException(var11);
+            } catch (ClassNotFoundException | IllegalAccessException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         } else {
             this.type = clazz;
